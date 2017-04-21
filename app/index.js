@@ -30,6 +30,16 @@ sayName.call(katie);
 var newFunction = sayName.bind(katie);
 console.log(newFunction);
 
+// new binding 
+// Constructor functions are Capitalized
+var Animal = function(color, name, type) {
+  this.color = color, 
+  this.name = name,
+  this.type = type  
+};
+
+var zebra = new Animal('black and white', 'zorro', 'zebra');
+
 class App extends React.Component {
     render() {
     return (
