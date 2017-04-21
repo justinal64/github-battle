@@ -16,6 +16,20 @@ var justin = {
 
 justin.sayName();
 
+// Explicit Binding
+var katie = {
+    name: "Katie"
+}
+
+var sayName = function() {
+    console.log("My name is " + this.name);
+}
+// calls the function and passes katie as the "this"
+sayName.call(katie);
+// .bind returns the function and you can call it later
+var newFunction = sayName.bind(katie);
+console.log(newFunction);
+
 class App extends React.Component {
     render() {
     return (
