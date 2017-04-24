@@ -1,31 +1,9 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 require('./index.css');
-
-import Props1 from './components/Props1';
-
-var family = ["Justin", "Katie", "Kallie", "Zoey", "Nox", "Pax"];
-
-class App extends React.Component {
-    render() {
-    return (
-        <div>
-            <h1>Name: {this.props.name}</h1>
-            <h3>username: {this.props.username}</h3>
-            <ul>
-                {family.map(function(member) {
-                    return <li key={member}> {member} </li>
-                })}
-            </ul>
-        </div>
-    )
-  }
-}
+var App = require('./components/App');
 
 ReactDOM.render(
-  <App 
-  name = "Justin Leggett"
-  username = "justinal64"
-  />,
+  <App />,
   document.getElementById('app')
 );
